@@ -1,0 +1,25 @@
+baseURL = "https://joshwgray.github.io/"
+languageCode = "en-us"
+title = "Josh Gray's Blog"
+theme = "PaperMod"
+
+[params]
+  # Basic configurations
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 20
