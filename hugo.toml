@@ -5,6 +5,7 @@ theme = "PaperMod"
 
 [params]
   # Basic configurations
+  author = "Josh Gray"
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = true
