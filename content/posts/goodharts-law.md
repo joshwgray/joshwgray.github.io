@@ -1,7 +1,7 @@
 +++
 date = '2025-02-24T17:46:59Z'
 draft = false
-title = 'Goodharts Law'
+title = 'Goodharts Law in Software Engineering'
 +++
 
 # Goodhart's Law in Software Engineering

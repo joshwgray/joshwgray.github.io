@@ -6,8 +6,17 @@
     <description>Recent content on Josh Gray&#39;s Blog</description>
     <generator>Hugo -- 0.143.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Feb 2025 17:46:59 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2025 18:08:42 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Broken Windows</title>
+      <link>http://localhost:1313/posts/broken-windows/</link>
+      <pubDate>Mon, 24 Feb 2025 18:08:42 +0000</pubDate>
+      <guid>http://localhost:1313/posts/broken-windows/</guid>
+      <description>&lt;h1 id=&#34;introduction-to-the-broken-windows-theory&#34;&gt;Introduction to the Broken Windows Theory&lt;/h1&gt;
+&lt;p&gt;The &lt;strong&gt;Broken Windows Theory&lt;/strong&gt;, introduced by social scientists &lt;strong&gt;James Q. Wilson&lt;/strong&gt; and &lt;strong&gt;George L. Kelling&lt;/strong&gt; in 1982, suggests that visible signs of disorder and neglect, such as broken windows, lead to more disorder and crime. The idea is that maintaining and monitoring urban environments in a well-ordered condition may stop further vandalism and escalation into more serious crime.&lt;/p&gt;
+&lt;p&gt;I must confess, I hadn’t even heard of this particular topic until it was introduced to me by a &lt;strong&gt;Principal Engineer&lt;/strong&gt; in a previous role who used to reference it a lot. At first, I thought he was just being overly enthusiastic, but as it turns out, he was right all along. His persistent reminders and detailed explanations eventually made me realize the importance of this concept.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Goodharts Law</title>
       <link>http://localhost:1313/posts/goodharts-law/</link>
