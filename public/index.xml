@@ -49,12 +49,5 @@
       <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;Hi, I&amp;rsquo;m Josh! This is my blog where I write about&amp;hellip;&lt;/p&gt;</description>
     </item>
-    <item>
-      <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
-      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>&lt;p&gt;Hello! This is my first blog post. Welcome to my site!&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>

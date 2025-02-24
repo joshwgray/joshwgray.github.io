@@ -42,12 +42,5 @@
 &lt;h2 id=&#34;balancing-metrics&#34;&gt;Balancing Metrics&lt;/h2&gt;
 &lt;p&gt;To avoid the pitfalls of Goodhart&amp;rsquo;s Law, it&amp;rsquo;s essential to balance metrics with a holistic approach:&lt;/p&gt;</description>
     </item>
-    <item>
-      <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
-      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>&lt;p&gt;Hello! This is my first blog post. Welcome to my site!&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>
