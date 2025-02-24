@@ -2,17 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Josh Gray&#39;s Blog</title>
-    <link>https://joshwgray.github.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Josh Gray&#39;s Blog</description>
     <generator>Hugo -- 0.143.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://joshwgray.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Feb 2025 17:46:59 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Goodharts Law</title>
+      <link>http://localhost:1313/posts/goodharts-law/</link>
+      <pubDate>Mon, 24 Feb 2025 17:46:59 +0000</pubDate>
+      <guid>http://localhost:1313/posts/goodharts-law/</guid>
+      <description>&lt;h1 id=&#34;goodharts-law-in-software-engineering&#34;&gt;Goodhart&amp;rsquo;s Law in Software Engineering&lt;/h1&gt;
+&lt;p&gt;Goodhart&amp;rsquo;s Law states:&lt;br&gt;
+&lt;em&gt;&amp;ldquo;When a measure becomes a target, it ceases to be a good measure.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This can have significant implications in a software engineering environment.&lt;/p&gt;
+&lt;h2 id=&#34;examples-of-goodharts-law-in-action&#34;&gt;Examples of Goodhart’s Law in Action&lt;/h2&gt;
+&lt;h3 id=&#34;1-code-quality-metrics&#34;&gt;1. Code Quality Metrics&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scenario:&lt;/strong&gt; A team is measured by the number of lines of code (LOC) they produce.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Outcome:&lt;/strong&gt; Developers might write verbose code to increase LOC, sacrificing readability and maintainability. The focus shifts from writing efficient, clean code to simply increasing the LOC metric.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-bug-fixing&#34;&gt;2. Bug Fixing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scenario:&lt;/strong&gt; The team is rewarded based on the number of bugs they fix.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Outcome:&lt;/strong&gt; Developers might prioritize fixing easy, low-impact bugs to boost their numbers, while more complex, critical bugs remain unresolved. The metric (number of bugs fixed) becomes the target, overshadowing the importance of fixing high-priority issues.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-feature-delivery&#34;&gt;3. Feature Delivery&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scenario:&lt;/strong&gt; Success is measured by the number of features delivered in a sprint.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Outcome:&lt;/strong&gt; The team might rush to complete features without thorough testing or proper documentation, leading to technical debt and potential issues in the future. The focus on quantity over quality can degrade the overall product.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-code-reviews&#34;&gt;4. Code Reviews&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scenario:&lt;/strong&gt; Engineers are evaluated based on the number of code reviews they complete.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Outcome:&lt;/strong&gt; Reviewers might rush through code reviews to meet their targets, providing superficial feedback instead of thorough, constructive critiques. This can lead to lower code quality and missed opportunities for improvement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;balancing-metrics&#34;&gt;Balancing Metrics&lt;/h2&gt;
+&lt;p&gt;To avoid the pitfalls of Goodhart&amp;rsquo;s Law, it&amp;rsquo;s essential to balance metrics with a holistic approach:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My First Post</title>
-      <link>https://joshwgray.github.io/posts/my-first-post/</link>
+      <link>http://localhost:1313/posts/my-first-post/</link>
       <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://joshwgray.github.io/posts/my-first-post/</guid>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
       <description>&lt;p&gt;Hello! This is my first blog post. Welcome to my site!&lt;/p&gt;</description>
     </item>
   </channel>
