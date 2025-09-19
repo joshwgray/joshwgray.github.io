@@ -3,16 +3,63 @@ languageCode = "en-us"
 title = "Josh Gray's Blog"
 theme = "PaperMod"
 
+# Enable syntax highlighting
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+
 [params]
   # Basic configurations
   author = "Josh Gray"
+  description = "A software engineering blog focused on principles, best practices, and technical leadership"
+  keywords = ["software engineering", "programming", "leadership", "code quality", "technical debt"]
+  
+  # Theme settings
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = false
+  tocopen = false
+
+  # SEO and Social
+  images = ["og-image.png"] # Add your Open Graph image
   
+  # Social media
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/joshwgray"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/joshwgray"
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+  # Home page info
+  [params.homeInfoParams]
+    Title = "Welcome to Josh Gray's Blog"
+    Content = "Exploring software engineering principles, best practices, and technical leadership through practical insights and real-world applications."
+
+  # Search
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
 [menu]
   [[menu.main]]
     identifier = "posts"
@@ -20,7 +67,57 @@ theme = "PaperMod"
     url = "/posts/"
     weight = 10
   [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 20
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 30
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 20
+    weight = 40
+
+# Taxonomies
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+# Markup configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    style = "github"
+
+# Privacy configuration
+[privacy]
+  [privacy.vimeo]
+    disabled = false
+    simple = true
+  [privacy.twitter]
+    disabled = false
+    enableDNT = true
+    simple = true
+  [privacy.instagram]
+    disabled = false
+    simple = true
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
+
+# Services
+[services]
+  [services.googleAnalytics]
+    # Add your Google Analytics ID here when ready
+    # ID = "G-XXXXXXXXXX"

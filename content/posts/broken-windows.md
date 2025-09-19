@@ -2,6 +2,10 @@
 date = '2025-02-24T18:08:42Z'
 draft = false
 title = 'The Broken Windows Theory in Software Engineering'
+description = 'How small issues in code quality can lead to bigger problems over time, and strategies to prevent technical debt accumulation'
+tags = ['software-engineering', 'code-quality', 'technical-debt', 'best-practices', 'team-culture']
+categories = ['Engineering Principles']
+series = ['Software Engineering Concepts']
 +++
 
 # Introduction to the Broken Windows Theory

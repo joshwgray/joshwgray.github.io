@@ -2,6 +2,10 @@
 date = '2025-02-24T17:46:59Z'
 draft = false
 title = 'Goodharts Law in Software Engineering'
+description = 'Understanding how metrics can become counterproductive when they become targets, and how to balance measurement with outcomes'
+tags = ['software-engineering', 'metrics', 'team-management', 'best-practices', 'leadership']
+categories = ['Engineering Principles']
+series = ['Software Engineering Concepts']
 +++
 
 # Goodhart's Law in Software Engineering
