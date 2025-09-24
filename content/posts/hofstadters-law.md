@@ -1,7 +1,7 @@
 +++
 date = '2025-02-24T18:30:00Z'
 draft = false
-title = 'Hofstadter\'s Law: Why Software Projects Always Take Longer Than Expected'
+title = "Hofstadter's Law: Why Software Projects Always Take Longer Than Expected"
 description = 'Understanding the recursive nature of time estimation and why adding buffers to your project timelines is never enough'
 tags = ['software-engineering', 'project-management', 'estimation', 'team-management', 'best-practices']
 categories = ['Engineering Principles']
