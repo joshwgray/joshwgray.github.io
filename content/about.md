@@ -49,8 +49,7 @@ My writing is inspired by concepts like:
 Feel free to reach out if you'd like to discuss software engineering, share insights, or explore collaboration opportunities:
 
 - **GitHub**: [@joshwgray](https://github.com/joshwgray)
-- **LinkedIn**: [Connect with me](https://linkedin.com/in/joshwgray) *(Update with your actual LinkedIn)*
-- **Email**: [your.email@domain.com](mailto:your.email@domain.com) *(Update with your actual email)*
+- **LinkedIn**: [Connect with me](https://linkedin.com/in/joshwgray)
 
 ---
 
