@@ -1,0 +1,142 @@
+---
+categories:
+  - name: Leadership & Management
+    skills:
+      - name: Team Leadership
+        proficiency: expert
+        yearsExperience: 10+
+      - name: Engineering Management
+        proficiency: expert
+        yearsExperience: 8+
+      - name: Management
+        proficiency: expert
+        yearsExperience: 10+
+      - name: Mentoring
+        proficiency: expert
+        yearsExperience: 10+
+      - name: Performance Management
+        proficiency: advanced
+        yearsExperience: 8+
+      - name: Stakeholder Management
+        proficiency: advanced
+        yearsExperience: 10+
+
+  - name: Development
+    skills:
+      - name: C#
+        proficiency: advanced
+        yearsExperience: 15+
+      - name: .NET
+        proficiency: advanced
+        yearsExperience: 15+
+      - name: ASP.NET MVC
+        proficiency: advanced
+        yearsExperience: 10+
+      - name: Entity Framework
+        proficiency: advanced
+        yearsExperience: 8+
+      - name: DotNet Core
+        proficiency: advanced
+        yearsExperience: 5+
+      - name: WebApi2
+        proficiency: advanced
+        yearsExperience: 5+
+      - name: HTML
+        proficiency: advanced
+        yearsExperience: 10+
+      - name: CSS
+        proficiency: intermediate
+        yearsExperience: 10+
+      - name: jQuery
+        proficiency: intermediate
+        yearsExperience: 8+
+
+  - name: Architecture & Design
+    skills:
+      - name: Solution Architecture
+        proficiency: advanced
+        yearsExperience: 6+
+      - name: IaC
+        proficiency: intermediate
+        yearsExperience: 4+
+      - name: System Design
+        proficiency: advanced
+        yearsExperience: 8+
+
+  - name: Cloud & DevOps
+    skills:
+      - name: Microsoft Azure
+        proficiency: advanced
+        yearsExperience: 5+
+      - name: Azure DevOps
+        proficiency: advanced
+        yearsExperience: 5+
+      - name: Terraform
+        proficiency: intermediate
+        yearsExperience: 4+
+      - name: CI/CD
+        proficiency: advanced
+        yearsExperience: 6+
+      - name: DevOps
+        proficiency: advanced
+        yearsExperience: 8+
+      - name: Git
+        proficiency: expert
+        yearsExperience: 10+
+      - name: GitHub
+        proficiency: expert
+        yearsExperience: 8+
+
+  - name: Methodologies
+    skills:
+      - name: Agile
+        proficiency: expert
+        yearsExperience: 12+
+      - name: SCRUM
+        proficiency: advanced
+        yearsExperience: 10+
+      - name: SaaS
+        proficiency: advanced
+        yearsExperience: 6+
+
+  - name: Data
+    skills:
+      - name: SQL
+        proficiency: advanced
+        yearsExperience: 15+
+      - name: SQL Server
+        proficiency: advanced
+        yearsExperience: 12+
+
+  - name: Tools
+    skills:
+      - name: Visual Studio
+        proficiency: expert
+        yearsExperience: 15+
+      - name: PowerBI
+        proficiency: intermediate
+        yearsExperience: 4+
+      - name: Thunderhead
+        proficiency: intermediate
+        yearsExperience: 2
+
+  - name: Specialized
+    skills:
+      - name: RPA
+        proficiency: advanced
+        yearsExperience: 3+
+      - name: Document Automation
+        proficiency: advanced
+        yearsExperience: 2+
+      - name: Product Management
+        proficiency: advanced
+        yearsExperience: 6+
+      - name: QA Testing
+        proficiency: intermediate
+        yearsExperience: 5+
+      - name: Web Analytics
+        proficiency: intermediate
+        yearsExperience: 4+
+      - name: AI Adoption
+        proficiency: intermediate
+        yearsExperience: 1+

@@ -31,3 +31,18 @@ Thumbs.db
 # Temporary files
 tmp/
 temp/
+
+# Plan files
+plans/
+*-plan.md
+*-complete.md
+*-summary.md
+*-notes.md
+*-verification.md
+*-test-results.md
+PHASE-*-COMPLETE.md
+phase-*-verification.md
+phase-*-summary.md
+phase-*-test-results.md
+*-architecture.md
+*-guide.md

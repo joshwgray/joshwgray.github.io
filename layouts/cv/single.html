@@ -1,0 +1,216 @@
+{{- define "main" -}}
+{{- $metadata := site.Data.cv.metadata -}}
+{{- $positions := sort site.Data.cv.experience.positions "startDate" "desc" -}}
+{{- $skillCategories := site.Data.cv.skills.categories -}}
+
+<article class="cv-page">
+  <header class="cv-header">
+    <h1>{{ .Title }}</h1>
+    {{- with $metadata.tagline }}
+    <p class="cv-tagline">{{ . }}</p>
+    {{- end }}
+    {{- with $metadata.summary }}
+    <p class="cv-summary">{{ . }}</p>
+    {{- end }}
+
+    <section class="cv-contact" aria-label="Contact information">
+      <h2>Contact</h2>
+      <ul>
+        <li>{{- with $metadata.contact.location -}}{{ . }}{{- end -}}</li>
+        <li>{{- with $metadata.contact.availability -}}{{ . }}{{- end -}}</li>
+      </ul>
+
+      {{- with $metadata.social }}
+      <div class="cv-social-links" role="list" aria-label="Social links">
+        {{- range . }}
+        <div role="listitem">
+          <a href="{{ .url }}" rel="noopener noreferrer" target="_blank">{{ .platform }}: {{ .username }}</a>
+        </div>
+        {{- end }}
+      </div>
+      {{- end }}
+    </section>
+  </header>
+
+  {{- if .Content }}
+  <section class="cv-intro" aria-label="Introduction">
+    {{ .Content }}
+  </section>
+  {{- end }}
+
+  <!-- Filter and Search Controls -->
+  <div class="cv-controls" role="region" aria-label="CV filter and search controls">
+    <!-- Search Input -->
+    <div class="cv-search-box">
+      <label for="cv-search" class="cv-search-label">Search:</label>
+      <input 
+        type="search" 
+        id="cv-search" 
+        class="cv-search-input" 
+        placeholder="Search skills, companies, roles..."
+      />
+    </div>
+
+    <!-- Filter Controls -->
+    <div class="cv-filters">
+      <!-- Role Type Filters -->
+      <div class="cv-filter-group" role="group" aria-label="Filter by role type">
+        <span class="cv-filter-label">Role Type:</span>
+        <button 
+          type="button" 
+          class="cv-filter-btn" 
+          data-filter-type="type" 
+          data-filter-value="management"
+          aria-pressed="false"
+        >
+          Management
+        </button>
+        <button 
+          type="button" 
+          class="cv-filter-btn" 
+          data-filter-type="type" 
+          data-filter-value="engineering"
+          aria-pressed="false"
+        >
+          Engineering
+        </button>
+        <button 
+          type="button" 
+          class="cv-filter-btn" 
+          data-filter-type="type" 
+          data-filter-value="technical"
+          aria-pressed="false"
+        >
+          Technical
+        </button>
+      </div>
+
+      <!-- Decade Filters -->
+      <div class="cv-filter-group" role="group" aria-label="Filter by decade">
+        <span class="cv-filter-label">Decade:</span>
+        <button 
+          type="button" 
+          class="cv-filter-btn" 
+          data-filter-type="decade" 
+          data-filter-value="2020"
+          aria-pressed="false"
+        >
+          2020s
+        </button>
+        <button 
+          type="button" 
+          class="cv-filter-btn" 
+          data-filter-type="decade" 
+          data-filter-value="2010"
+          aria-pressed="false"
+        >
+          2010s
+        </button>
+        <button 
+          type="button" 
+          class="cv-filter-btn" 
+          data-filter-type="decade" 
+          data-filter-value="2000"
+          aria-pressed="false"
+        >
+          2000s
+        </button>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="cv-actions">
+      <button 
+        type="button" 
+        class="cv-action-btn cv-clear-btn" 
+        id="cv-clear-filters"
+        aria-label="Clear all filters and search"
+      >
+        Clear Filters
+      </button>
+      <button 
+        type="button" 
+        class="cv-action-btn cv-download-btn" 
+        id="cv-download-pdf"
+        aria-label="Download CV as PDF"
+      >
+        📄 Download PDF
+      </button>
+    </div>
+
+    <p id="cv-results-announcer" class="cv-visually-hidden" aria-live="polite" aria-atomic="true"></p>
+    <p id="cv-filter-announcer" class="cv-visually-hidden" aria-live="polite" aria-atomic="true"></p>
+  </div>
+
+  {{- with $skillCategories }}
+  <section class="cv-skills" aria-label="Skills overview">
+    <h2>Skills</h2>
+    {{- range . }}
+    <article class="cv-skill-category">
+      <h3>{{ .name }}</h3>
+      <div role="list" aria-label="{{ .name }} skills">
+        {{- range .skills }}
+        <div role="listitem" data-skill-level="{{ .proficiency }}">{{ .name }}</div>
+        {{- end }}
+      </div>
+    </article>
+    {{- end }}
+  </section>
+  {{- end }}
+
+  <section class="cv-timeline" aria-label="Career timeline">
+    <h2>Experience</h2>
+    {{- range $positions }}
+    {{- $startYear := index (split .startDate "-") 0 -}}
+    {{- $types := slice -}}
+    {{- if reflect.IsSlice .type -}}
+      {{- $types = .type -}}
+    {{- else -}}
+      {{- $types = slice .type -}}
+    {{- end -}}
+    {{- $dataType := lower (delimit $types " ") -}}
+    {{- $dataSkills := lower (delimit .skills ",") -}}
+
+    <article class="cv-position" data-year="{{ $startYear }}" data-type="{{ $dataType }}" data-skills="{{ $dataSkills }}">
+      <header>
+        <h3>{{ .role }} <span class="cv-company">at {{ .company }}</span></h3>
+        <p class="cv-meta">
+          <time datetime="{{ .startDate }}">{{ .startDate }}</time>
+          to
+          {{ if eq (lower (printf "%v" .endDate)) "present" }}
+            <time>Present</time>
+          {{ else }}
+            <time datetime="{{ .endDate }}">{{ .endDate }}</time>
+          {{ end }}
+          {{- with .duration }} <span>({{ . }})</span>{{- end -}}
+          {{- with .location }} <span>{{ . }}</span>{{- end -}}
+        </p>
+        {{- with .description }}
+        <p>{{ . }}</p>
+        {{- end }}
+      </header>
+
+      <section aria-label="Key highlights">
+        <h4>Highlights</h4>
+        <ul>
+          {{- range .highlights }}
+          <li>{{ . }}</li>
+          {{- end }}
+        </ul>
+      </section>
+
+      <section aria-label="Role details">
+        <details class="cv-expandable-details">
+          <summary>Show details</summary>
+          <p><strong>Skills:</strong> {{ delimit .skills ", " }}</p>
+          <p><strong>Technologies:</strong> {{ delimit .technologies ", " }}</p>
+        </details>
+      </section>
+    </article>
+    {{- end }}
+  </section>
+</article>
+
+{{- $cvInteractive := resources.Get "js/cv-interactive.js" | resources.Minify | fingerprint -}}
+<script defer src="{{ $cvInteractive.RelPermalink }}" integrity="{{ $cvInteractive.Data.Integrity }}"></script>
+{{- end -}}

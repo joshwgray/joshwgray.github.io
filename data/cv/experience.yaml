@@ -1,0 +1,335 @@
+---
+positions:
+  - id: cubic-manager
+    company: Cubic³
+    role: Software Engineering Manager
+    startDate: "2025-10"
+    endDate: present
+    duration: 6 months
+    location: Dublin
+    type: management
+    description: Lead multiple engineering teams, ensuring alignment on technical strategy
+    highlights:
+      - Lead multiple engineering teams, ensuring alignment on technical strategy
+      - Manage people development through mentoring, coaching, performance reviews
+      - Drive operational excellence through incident management, quality assurance
+      - Collaborate with Architecture and Product teams on roadmap planning
+      - Worked on initiative to implement and facilitate increased AI adoption
+    skills:
+      - Team Leadership
+      - Engineering Management
+      - AI Adoption
+      - Technical Strategy
+      - Mentoring
+    technologies:
+      - GitHub
+      - GitHub Copilot
+      - GitHub Copilot CLI
+      - CI/CD
+      - Azure
+      - Azure DevOps
+      - .NET
+      - C#
+
+  - id: cubic-lead
+    company: Cubic³
+    role: Software Engineering Team Lead
+    startDate: "2025-03"
+    endDate: "2025-10"
+    duration: 8 months
+    location: Dublin
+    type: leadership
+    description: Technical leadership for engineering team
+    highlights:
+      - Led technical direction and architecture decisions for engineering team
+      - Mentored engineers on best practices and code quality
+      - Facilitated sprint planning and technical refinement sessions
+      - Collaborated with cross-functional teams on feature delivery
+      - Drove adoption of modern development practices and tooling
+    skills:
+      - Team Leadership
+      - Technical Leadership
+    technologies:
+      - GitHub
+      - GitHub Copilot
+      - CI/CD
+      - Azure
+      - Azure DevOps
+      - .NET
+      - C#
+
+  - id: unum-manager
+    company: Unum Ireland
+    role: Software Engineering Manager / IT Delivery Manager
+    startDate: "2023-05"
+    endDate: "2025-03"
+    duration: 1 year 11 months
+    location: Carlow
+    type: management
+    description: Oversaw overall delivery of software engineering team
+    highlights:
+      - Oversaw overall delivery of software engineering team
+      - Collaborated with product owners to prioritize initiatives
+      - Mentored and inspired team members
+      - Ensured adherence to best software engineering practices
+    skills:
+      - Team Leadership
+      - Product Management
+      - Mentoring
+      - Agile
+      - DevOps
+    technologies:
+      - Azure
+      - Azure DevOps
+      - .NET
+      - C#
+      - SQL Server
+      - Git
+
+  - id: gemini-manager
+    company: The Gemini Solution
+    role: Engineering Manager
+    startDate: "2020-12"
+    endDate: "2023-05"
+    duration: 2 years 6 months
+    location: Cape Town, South Africa
+    type: management
+    description: Engineering Manager for Willow Marketplace leading distributed team
+    highlights:
+      - Engineering Manager for Willow Marketplace leading distributed team
+      - Align with Product Management on product direction
+      - Work with Product Management, SMEs, and Product Design to refine priorities
+      - Sponsor Engineering led projects on Product backlog
+      - Continuously evaluate processes for quality software delivery
+      - Lead and mentor engineering team
+      - Complete monthly 1:1 Performance Conversations
+      - Build diverse team with inclusive culture
+    skills:
+      - Team Leadership
+      - Management
+      - Engineering Management
+      - Agile
+      - DevOps
+    technologies:
+      - GitHub
+      - CI/CD
+      - SaaS
+      - IaC
+      - DotNet Core
+      - Azure DevOps
+      - Terraform
+      - Microsoft Azure
+      - C#
+      - .NET
+      - SQL
+      - Git
+      - Visual Studio
+
+  - id: openbox-lead
+    company: Open Box Software
+    role: Technical Team Lead
+    startDate: "2018-07"
+    endDate: "2020-12"
+    duration: 2 years 6 months
+    location: Cape Town, South Africa
+    type: [leadership, technical]
+    description: Automation Solutions Architect and Team Lead
+    highlights:
+      - Investigation of new RPA tools
+      - Architect RPA process implementations
+      - Lead team of 7 RPA Developers
+      - Develop custom functionality and extend existing features
+      - Schedule and conduct regular one-on-one check-ins
+      - Perform performance reviews
+      - Coach team members on career goals and skill development
+      - Work with Operations Manager to implement PowerBI dashboards
+      - Oversee solution design documentation
+      - Oversee project requirements and business process improvement design
+    skills:
+      - RPA
+      - Team Leadership
+      - Management
+      - Solution Architecture
+      - Performance Management
+      - Automation
+    technologies:
+      - PowerBI
+      - Blue Prism
+      - UiPath
+      - Microsoft Azure
+      - C#
+      - Automation Anywhere
+
+  - id: eoh-developer
+    company: EOH MC Solutions
+    role: Software Developer
+    startDate: "2017-06"
+    endDate: "2018-06"
+    duration: 1 year
+    location: Cape Town, South Africa
+    type: engineering
+    description: Backend and API development using .NET/MVC and WebApi2
+    highlights:
+      - Backend and API development using .NET/MVC and WebApi2
+      - Agile environment with strict SCRUM focus
+      - SCRUM Product Owner certification through ScrumAlliance
+      - Delivered project for large manufacturing company to optimize IT systems
+      - Rewrite of aged Delphi-based manufacturing and warehouse systems
+    skills:
+      - API Development
+      - Backend Development
+      - Agile
+      - SCRUM
+    technologies:
+      - .NET
+      - C#
+      - MVC
+      - WebApi2
+
+  - id: globalkinetic-developer
+    company: Global Kinetic
+    role: Software Developer
+    startDate: "2013-05"
+    endDate: "2017-06"
+    duration: 4 years 2 months
+    location: Cape Town, South Africa
+    type: engineering
+    description: Feature development for clients in Agile environment
+    highlights:
+      - Feature development for clients in Agile environment
+      - ASP.NET MVC projects using Entity Framework, jQuery, SQL Server
+      - Internal and client applications ranging from financial to CMS
+      - "Key project: TrustaTag - patented 2D barcode system for healthcare products"
+    skills:
+      - Agile
+    technologies:
+      - ASP.NET MVC
+      - Entity Framework
+      - jQuery
+      - JavaScript
+      - SQL Server
+      - C#
+
+  - id: santam-analyst
+    company: Santam
+    role: System Analyst
+    startDate: "2012-12"
+    endDate: "2013-05"
+    duration: 6 months
+    location: Cape Town, South Africa
+    type: technical
+    description: System Analyst on large Document Automation project
+    highlights:
+      - System Analyst on large Document Automation project
+      - Thunderhead NOW suite (Business Object Studio, Business Content Studio, Business Admin)
+      - Integrate document templates with Guidewire Policy Centre
+      - Senior business stakeholder involvement for business rules
+      - Agile environment with daily scrums, sprint planning
+    skills:
+      - Document Automation
+      - Business Analysis
+      - Agile
+      - SCRUM
+    technologies:
+      - Thunderhead
+      - XML / XSD
+
+  - id: standardbank-developer
+    company: Standard Bank CIB
+    role: Software Developer
+    startDate: "2011-09"
+    endDate: "2012-11"
+    duration: 1 year 3 months
+    location: Johannesburg, South Africa
+    type: engineering
+    description: In-house and client-facing account management applications
+    highlights:
+      - In-house and client-facing account management applications
+      - Commodities and Trade Settlements business
+      - Trade Reporting software (FSA reporting)
+      - Maintenance and support of application suite
+      - Out-of-hours support
+      - Technical point of contact for London and Hong Kong offices
+    skills:
+      - Support
+      - Stakeholder Management
+    technologies:
+      - C#
+      - .NET
+      - SQL Server
+      - JavaScript
+
+  - id: nokia-manager
+    company: Nokia
+    role: Technical Service Manager
+    startDate: "2009-08"
+    endDate: "2011-08"
+    duration: 2 years 1 month
+    location: Johannesburg, South Africa
+    type: [management, technical]
+    description: Technical Service Manager for Nokia Music in South Africa
+    highlights:
+      - Technical Service Manager for Nokia Music in South Africa
+      - Support South African and Pan Arab sales units
+      - Technical maintenance of Nokia Music Service lifecycle
+      - Platform/product updates, device testing, QA testing
+      - Localized product manager and technical advisory
+      - Customer Relationship Marketing, Web Analytics
+      - Managed NPS widget rollout
+      - Managed Pinless Activation rollout for Ovi Music Unlimited
+    skills:
+      - Product Management
+      - Technical Support
+      - QA Testing
+      - Service Management
+    technologies:
+      - Web Analytics
+      - CRM
+      - C#
+      - SQL Server
+      - Silverlight
+      - .NET
+
+  - id: jayess-developer
+    company: Jayess Software
+    role: Junior Developer
+    startDate: "2009-03"
+    endDate: "2009-07"
+    duration: 6 months
+    location: South Africa
+    type: engineering
+    description: Design, development, and maintenance of websites
+    highlights:
+      - Design, development, and maintenance of websites
+      - 3-tiered applications using C#, web services, SQL 2000-2005
+      - Development work at client sites
+    skills: []
+    technologies:
+      - C#
+      - Web Services
+      - SQL
+      - HTML
+      - CSS
+      - .NET 3.5
+
+  - id: aa-developer
+    company: The Automobile Association
+    role: Thunderhead Developer
+    startDate: "2008-05"
+    endDate: "2008-11"
+    duration: 7 months
+    location: Basingstoke, UK
+    type: engineering
+    description: Thunderhead Analyst/Developer in Insurance Team
+    highlights:
+      - Thunderhead Analyst/Developer in Insurance Team
+      - Creation and maintenance of legally approved templates
+      - Thunderhead System (Business Content Studio, Business Object Studio)
+      - Design, development, testing, and documentation
+      - Implementation of documents with business rules
+    skills:
+      - Document Development
+      - Template Development
+    technologies:
+      - Thunderhead
+      - Insurance
