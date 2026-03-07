@@ -1,0 +1,22 @@
+---
+tagline: "Engineering Leader | AI Enthusiast | Building High-Performing Teams"
+email: "contact@thegrayarea.dev"
+
+social:
+  - platform: GitHub
+    url: https://github.com/joshwgray
+    username: joshwgray
+    icon: github
+  - platform: LinkedIn
+    url: https://linkedin.com/in/joshwgray
+    username: joshwgray
+    icon: linkedin
+
+contact:
+  location: Dublin, Ireland
+  availability: Open to opportunities
+
+preferences:
+  theme: professional
+  showPhoto: false
+  showContactForm: true

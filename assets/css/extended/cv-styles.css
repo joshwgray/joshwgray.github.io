@@ -1,0 +1,1303 @@
+/* =============================================================================
+   CV Styles - Interactive Timeline
+   ============================================================================= */
+
+/* Global resets for CV page */
+
+/* Reset any parent containers */
+main:has(.cv-page),
+#main:has(.cv-page),
+.main:has(.cv-page) {
+  list-style: none !important;
+  display: block !important;
+}
+
+.cv-page details summary::-webkit-details-marker,
+.cv-page summary::-webkit-details-marker {
+  display: none !important;
+}
+
+/* -----------------------------------------------------------------------------
+   CV Page Layout
+   ----------------------------------------------------------------------------- */
+
+.cv-page {
+  max-width: var(--main-width);
+  margin: 0 auto;
+  padding: var(--gap);
+  display: block;
+  list-style: none !important;
+}
+
+.cv-page > * {
+  list-style: none !important;
+}
+
+.cv-skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 1000;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  background: var(--theme);
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cv-skip-link:focus,
+.cv-skip-link:focus-visible {
+  top: 1rem;
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.cv-visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}
+
+/* -----------------------------------------------------------------------------
+   CV Header Section
+   ----------------------------------------------------------------------------- */
+
+.cv-header {
+  margin-bottom: calc(var(--gap) * 2);
+  padding-bottom: var(--gap);
+  border-bottom: 2px solid var(--border);
+}
+
+.cv-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.cv-tagline {
+  font-size: 1.25rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.cv-summary {
+  font-size: 1.1rem;
+  color: var(--content);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* -----------------------------------------------------------------------------
+   CV Contact Section
+   ----------------------------------------------------------------------------- */
+
+.cv-contact {
+  margin-top: 1.5rem;
+}
+
+.cv-contact h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.cv-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cv-contact li {
+  color: var(--content);
+}
+
+.cv-contact a {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.2s ease;
+}
+
+.cv-contact a:hover {
+  border-bottom-color: var(--primary);
+}
+
+.cv-contact a:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.cv-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.cv-social-links div[role="listitem"] {
+  display: inline-block;
+}
+
+/* -----------------------------------------------------------------------------
+   CV Introduction
+   ----------------------------------------------------------------------------- */
+
+.cv-intro {
+  margin-bottom: calc(var(--gap) * 2);
+  padding: var(--gap);
+  background: var(--entry);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--primary);
+}
+
+.cv-intro p {
+  color: var(--content);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* -----------------------------------------------------------------------------
+   CV Controls - Filter and Search UI
+   ----------------------------------------------------------------------------- */
+
+.cv-controls {
+  margin-bottom: calc(var(--gap) * 2);
+  padding: 1.5rem;
+  background: var(--entry);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+/* Search Box */
+.cv-search-box {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cv-search-label {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.95rem;
+}
+
+.cv-search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: var(--content);
+  background: var(--theme);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cv-search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb, 30, 30, 30), 0.1);
+}
+
+.cv-search-input:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.cv-search-input::placeholder {
+  color: var(--secondary);
+  opacity: 0.7;
+}
+
+/* Filter Groups */
+.cv-filters {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cv-filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.cv-filter-label {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.95rem;
+  margin-right: 0.5rem;
+  min-width: 100px;
+}
+
+.cv-filter-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--content);
+  background: var(--theme);
+  border: 2px solid var(--border);
+  border-radius: calc(var(--radius) / 2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.cv-filter-btn:hover {
+  background: var(--tertiary);
+  border-color: var(--primary);
+}
+
+.cv-filter-btn:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb, 30, 30, 30), 0.1);
+}
+
+.cv-filter-btn:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.cv-filter-btn[aria-pressed="true"] {
+  background: var(--primary);
+  color: var(--theme);
+  border-color: var(--primary);
+  font-weight: 600;
+}
+
+/* Action Buttons */
+.cv-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.cv-action-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  border: 2px solid transparent;
+}
+
+.cv-clear-btn {
+  color: var(--content);
+  background: var(--theme);
+  border-color: var(--border);
+}
+
+.cv-clear-btn:hover {
+  background: var(--tertiary);
+  border-color: var(--primary);
+}
+
+.cv-clear-btn:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb, 30, 30, 30), 0.1);
+}
+
+.cv-clear-btn:focus-visible,
+.cv-download-btn:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.cv-download-btn {
+  color: var(--theme);
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.cv-download-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dark .cv-download-btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cv-download-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb, 30, 30, 30), 0.3);
+}
+
+.cv-download-btn:active {
+  transform: translateY(0);
+}
+
+/* -----------------------------------------------------------------------------
+   CV Skills Section
+   ----------------------------------------------------------------------------- */
+
+.cv-skills {
+  margin-bottom: calc(var(--gap) * 2);
+}
+
+.cv-skills h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.cv-skill-category {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--entry);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.cv-skill-category h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+
+.cv-skill-category div[role="list"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cv-skill-category div[role="listitem"] {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background: var(--code-bg);
+  border-radius: calc(var(--radius) / 2);
+  font-size: 0.9rem;
+  color: var(--content);
+  border: 1px solid var(--border);
+}
+
+.cv-skill-category div[role="listitem"][data-skill-level="expert"] {
+  background: var(--tertiary);
+  font-weight: 500;
+}
+
+/* -----------------------------------------------------------------------------
+   CV Timeline Section - Core Structure
+   ----------------------------------------------------------------------------- */
+
+.cv-timeline {
+  position: relative;
+  margin-bottom: calc(var(--gap) * 2);
+  list-style: none !important;
+  overflow: visible;
+}
+
+.cv-timeline::marker {
+  display: none !important;
+  content: none !important;
+}
+
+.cv-timeline > * {
+  list-style: none !important;
+}
+
+.cv-timeline h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  list-style: none !important;
+}
+
+.cv-timeline h2::marker,
+.cv-timeline h2::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* Timeline vertical line (mobile-first) */
+.cv-timeline::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 4rem;
+  bottom: 2rem;
+  width: 2px;
+  background: var(--border);
+}
+
+/* -----------------------------------------------------------------------------
+   CV Position Cards
+   ----------------------------------------------------------------------------- */
+
+.cv-position {
+  position: relative;
+  margin-bottom: 2rem;
+  margin-left: 0 !important;
+  padding: 1.5rem;
+  padding-left: 3rem;
+  background: var(--entry);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  list-style: none !important;
+  list-style-type: none !important;
+  display: block !important;
+}
+
+.cv-position::marker {
+  display: none !important;
+  content: none !important;
+  visibility: hidden !important;
+}
+
+.cv-position:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .cv-position:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Timeline connection dot - HIDDEN */
+.cv-position::before {
+  display: none !important;
+}
+
+/* Timeline connection line from dot to card - HIDDEN */
+.cv-position::after {
+  display: none !important;
+}
+
+/* -----------------------------------------------------------------------------
+   CV Position Content
+   ----------------------------------------------------------------------------- */
+
+.cv-position header {
+  margin-bottom: 1rem;
+}
+
+.cv-position h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  line-height: 1.3;
+}
+
+.cv-company {
+  font-weight: normal;
+  color: var(--secondary);
+  font-size: 1rem;
+}
+
+.cv-meta {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cv-meta time {
+  font-weight: 500;
+}
+
+.cv-meta span {
+  display: inline-block;
+}
+
+.cv-meta span::before {
+  content: '•';
+  margin-right: 0.5rem;
+}
+
+.cv-position header > p:not(.cv-meta) {
+  color: var(--content);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+/* -----------------------------------------------------------------------------
+   CV Position Highlights
+   ----------------------------------------------------------------------------- */
+
+.cv-position section[aria-label="Key highlights"] h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+
+.cv-position section[aria-label="Key highlights"] ul {
+  list-style-type: disc !important;
+  list-style-position: outside;
+  margin-left: 1.5rem;
+  padding-left: 0;
+}
+
+.cv-position section[aria-label="Key highlights"] li {
+  color: var(--content);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  display: list-item !important;
+  list-style-type: disc !important;
+}
+
+.cv-position section[aria-label="Key highlights"] li::marker {
+  color: var(--primary);
+  display: inline !important;
+}
+
+/* -----------------------------------------------------------------------------
+   CV Expandable Details (Collapsible Sections)
+   ----------------------------------------------------------------------------- */
+
+details,
+summary {
+  list-style: none;
+}
+
+details summary::-webkit-details-marker,
+details summary::marker {
+  display: none;
+}
+
+.cv-expandable-details {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--code-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  list-style: none;
+}
+
+.cv-expandable-details summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--primary);
+  user-select: none;
+  list-style: none !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  margin: -0.5rem;
+  border-radius: calc(var(--radius) / 2);
+  transition: background-color 0.2s ease;
+}
+
+.cv-expandable-details summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.cv-expandable-details summary::marker {
+  display: none !important;
+  content: none !important;
+}
+
+.cv-expandable-details summary::before {
+  content: '▶';
+  display: inline-block;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.cv-expandable-details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.cv-expandable-details summary:hover {
+  background: var(--tertiary);
+}
+
+.cv-expandable-details summary:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.cv-expandable-details summary:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.cv-expandable-details[open] summary {
+  margin-bottom: 1rem;
+}
+
+.cv-expandable-details p {
+  color: var(--content);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.cv-expandable-details p:last-child {
+  margin-bottom: 0;
+}
+
+.cv-expandable-details strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* -----------------------------------------------------------------------------
+   Responsive: Tablet (768px - 1024px)
+   ----------------------------------------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  .cv-header h1 {
+    font-size: 3rem;
+  }
+
+  .cv-tagline {
+    font-size: 1.4rem;
+  }
+
+  .cv-summary {
+    font-size: 1.15rem;
+  }
+
+  .cv-contact ul {
+    gap: 1.5rem;
+  }
+
+  /* Filter controls - horizontal layout on tablet */
+  .cv-search-box {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .cv-search-label {
+    min-width: 100px;
+  }
+
+  .cv-filters {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .cv-filter-group {
+    flex: 1 1 auto;
+    min-width: max-content;
+  }
+
+  /* Adjust timeline line for tablet */
+  .cv-timeline::before {
+    left: 2rem;
+  }
+
+  .cv-position {
+    padding-left: 4rem;
+  }
+
+  .cv-position::before {
+    left: -1rem;
+  }
+
+  .cv-position::after {
+    left: -0.45rem;
+    width: 2rem;
+  }
+
+  .cv-position h3 {
+    font-size: 1.5rem;
+  }
+
+  .cv-skills h2,
+  .cv-timeline h2 {
+    font-size: 2.25rem;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   Responsive: Desktop (> 1024px)
+   ----------------------------------------------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  .cv-page {
+    padding: calc(var(--gap) * 1.5);
+  }
+
+  .cv-header h1 {
+    font-size: 3.5rem;
+  }
+
+  .cv-tagline {
+    font-size: 1.5rem;
+  }
+
+  /* Two-column layout for contact info */
+  .cv-contact {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .cv-contact h2 {
+    margin-bottom: 0;
+  }
+
+  .cv-contact ul {
+    grid-column: 1 / -1;
+  }
+
+  /* Filter controls - larger, more spacious layout */
+  .cv-controls {
+    padding: 2rem;
+  }
+
+  .cv-search-box {
+    max-width: 600px;
+  }
+
+  .cv-filter-label {
+    min-width: 120px;
+  }
+
+  .cv-filter-btn {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .cv-action-btn {
+    padding: 0.85rem 1.75rem;
+    font-size: 1rem;
+  }
+
+  /* Skills grid layout */
+  .cv-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .cv-skills h2 {
+    grid-column: 1 / -1;
+  }
+
+  /* Timeline with more spacing */
+  .cv-timeline::before {
+    left: 3rem;
+  }
+
+  .cv-position {
+    padding: 2rem;
+    padding-left: 5rem;
+  }
+
+  .cv-position::before {
+    left: 0;
+    top: 2.5rem;
+    width: 16px;
+    height: 16px;
+  }
+
+  .cv-position::after {
+    left: 0.55rem;
+    top: 2.95rem;
+    width: 2.5rem;
+  }
+
+  .cv-position h3 {
+    font-size: 1.6rem;
+  }
+
+  .cv-skills h2,
+  .cv-timeline h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   Accessibility: Reduced Motion
+   ----------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .cv-position,
+  .cv-expandable-details summary,
+  .cv-expandable-details summary::before,
+  .cv-contact a,
+  .cv-filter-btn,
+  .cv-action-btn,
+  .cv-search-input {
+    transition: none;
+  }
+
+  .cv-position:hover {
+    transform: none;
+  }
+
+  .cv-download-btn:hover {
+    transform: none;
+  }
+
+  .cv-download-btn:active {
+    transform: none;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   Print Styles
+   ----------------------------------------------------------------------------- */
+
+@media print {
+  /* =========================================================================
+     PAGE SETUP
+     ========================================================================= */
+
+  @page {
+    size: A4;
+    margin: 1.5cm 1.8cm;
+  }
+
+  /* =========================================================================
+     HIDE SITE CHROME (PaperMod header, nav, footer)
+     ========================================================================= */
+
+  .header,
+  .footer,
+  .nav,
+  header.header,
+  footer.footer,
+  nav.nav,
+  .cv-controls,
+  .cv-skip-link {
+    display: none !important;
+  }
+
+  /* =========================================================================
+     RESET PAGE LAYOUT
+     ========================================================================= */
+
+  *,
+  *::before,
+  *::after {
+    color: #000 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 10pt;
+    line-height: 1.45;
+    color: #000;
+    background: #fff;
+  }
+
+  .main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .cv-page {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* =========================================================================
+     CV HEADER — Name, tagline, summary, contact
+     ========================================================================= */
+
+  .cv-header {
+    margin-bottom: 0.4cm;
+    padding-bottom: 0.25cm;
+    border-bottom: 1.5pt solid #000 !important;
+    page-break-after: avoid;
+  }
+
+  .cv-header h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0 !important;
+    margin: 0 0 2pt 0;
+    line-height: 1.1;
+    letter-spacing: 0.3pt;
+    color: #000 !important;
+    text-transform: none;
+  }
+
+  .cv-header h1::after {
+    content: "Josh Gray - Engineering CV";
+    font-size: 22pt;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    display: block;
+  }
+
+  .cv-tagline {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    font-weight: 400;
+    color: #333 !important;
+    margin: 3pt 0 5pt 0;
+    letter-spacing: 0.2pt;
+  }
+
+  .cv-summary {
+    font-size: 10pt;
+    font-style: italic;
+    color: #222 !important;
+    margin-bottom: 6pt;
+    line-height: 1.5;
+  }
+
+  /* Contact: hide "Contact" heading, render info inline */
+  .cv-contact {
+    margin-top: 5pt;
+    display: block;
+  }
+
+  .cv-contact h2 {
+    display: none !important;
+  }
+
+  .cv-contact ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none !important;
+    padding: 0;
+    margin: 0 0 3pt 0;
+    gap: 0;
+  }
+
+  .cv-contact li {
+    font-size: 9pt;
+    color: #444 !important;
+  }
+
+  .cv-contact li:not(:last-child)::after {
+    content: " \2022 ";
+    margin: 0 4pt;
+    color: #888 !important;
+  }
+
+  .cv-social-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-top: 2pt;
+  }
+
+  .cv-social-links div[role="listitem"] {
+    font-size: 9pt;
+  }
+
+  .cv-social-links div[role="listitem"]:not(:last-child)::after {
+    content: " \2022 ";
+    margin: 0 4pt;
+    color: #888 !important;
+  }
+
+  .cv-social-links a {
+    color: #222 !important;
+    text-decoration: none !important;
+    border: none !important;
+  }
+
+  /* =========================================================================
+     CV INTRO
+     ========================================================================= */
+
+  .cv-intro {
+    margin: 0.3cm 0;
+    padding: 0;
+    border-left: none !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  .cv-intro p {
+    font-size: 10pt;
+    font-style: italic;
+    color: #333 !important;
+    margin: 0;
+  }
+
+  /* =========================================================================
+     SECTION HEADINGS
+     ========================================================================= */
+
+  .cv-skills h2,
+  .cv-timeline h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    color: #000 !important;
+    border-bottom: 0.75pt solid #333 !important;
+    padding-bottom: 2pt;
+    margin: 0.45cm 0 0.2cm 0;
+  }
+
+  /* =========================================================================
+     SKILLS — Category label left, skills comma-separated right
+     ========================================================================= */
+
+  .cv-skills {
+    margin-bottom: 0.3cm;
+    display: block !important;
+  }
+
+  .cv-skill-category {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0;
+    padding: 0 !important;
+    margin-bottom: 4pt;
+    border: none !important;
+    background: transparent !important;
+    page-break-inside: avoid;
+  }
+
+  .cv-skill-category h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #000 !important;
+    margin: 0;
+    min-width: 3.8cm;
+    flex-shrink: 0;
+  }
+
+  .cv-skill-category div[role="list"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .cv-skill-category div[role="listitem"] {
+    font-size: 9.5pt;
+    color: #222 !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0;
+  }
+
+  .cv-skill-category div[role="listitem"]:not(:last-child)::after {
+    content: ", ";
+    margin-right: 2pt;
+    color: #222 !important;
+  }
+
+  /* =========================================================================
+     EXPERIENCE TIMELINE — Clean document style
+     ========================================================================= */
+
+  .cv-timeline {
+    list-style: none !important;
+  }
+
+  .cv-timeline::before {
+    display: none !important;
+  }
+
+  .cv-position {
+    padding: 0 !important;
+    margin: 0 0 0.45cm 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 0.5pt solid #ccc !important;
+    page-break-inside: avoid;
+    transform: none !important;
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .cv-position:last-child {
+    border-bottom: none !important;
+  }
+
+  /* Role name + company left, dates right */
+  .cv-position header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 3pt;
+    margin-bottom: 3pt;
+  }
+
+  .cv-position h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    font-weight: 700;
+    color: #000 !important;
+    margin: 0;
+    line-height: 1.3;
+    flex: 1 1 auto;
+  }
+
+  .cv-company {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 10.5pt;
+    color: #333 !important;
+  }
+
+  .cv-meta {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    color: #555 !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 3pt;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .cv-meta span::before {
+    content: '\2022';
+    margin-right: 3pt;
+    color: #888 !important;
+  }
+
+  /* Description paragraph (italic role summary) */
+  .cv-position header > p:not(.cv-meta) {
+    font-size: 9.5pt;
+    font-style: italic;
+    color: #444 !important;
+    margin: 2pt 0 3pt 0;
+    flex: 1 1 100%;
+  }
+
+  /* Highlights list */
+  .cv-position section[aria-label="Key highlights"] {
+    margin-top: 0;
+    padding-bottom: 6pt;
+  }
+
+  .cv-position section[aria-label="Key highlights"] h4 {
+    display: none !important;
+  }
+
+  .cv-position section[aria-label="Key highlights"] ul {
+    list-style-type: disc !important;
+    padding-left: 1.1em;
+    margin: 0;
+  }
+
+  .cv-position section[aria-label="Key highlights"] li {
+    font-size: 9.5pt;
+    color: #222 !important;
+    line-height: 1.5;
+    margin-bottom: 1pt;
+  }
+
+  /* Expand the skills/tech details section automatically */
+  details,
+  .cv-expandable-details {
+    display: block !important;
+    border: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+    margin-top: 3pt;
+  }
+
+  details summary,
+  .cv-expandable-details summary {
+    display: none !important;
+  }
+
+  details > *:not(summary) {
+    display: block !important;
+  }
+
+  .cv-expandable-details p {
+    font-size: 9pt;
+    color: #444 !important;
+    margin: 1pt 0;
+    line-height: 1.4;
+  }
+
+  .cv-expandable-details strong {
+    font-weight: 700;
+    color: #000 !important;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   Focus Styles for Accessibility
+   ----------------------------------------------------------------------------- */
+
+.cv-position:focus-within {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+.cv-position a:focus,
+.cv-skill-category:focus-within {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.cv-position a:focus-visible,
+.cv-skill-category:focus-within,
+#cv-main-content:focus {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+@media screen and (max-width: 480px) {
+  .cv-filter-btn,
+  .cv-action-btn,
+  .cv-search-input {
+    min-height: 44px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .cv-skip-link,
+  .cv-filter-btn,
+  .cv-action-btn,
+  .cv-search-input,
+  .cv-expandable-details summary {
+    border-width: 3px;
+  }
+
+  .cv-position,
+  .cv-skill-category,
+  .cv-expandable-details {
+    border-width: 2px;
+  }
+
+  .cv-timeline::before {
+    width: 3px;
+  }
+
+  .cv-position::before {
+    border-width: 3px;
+  }
+}
