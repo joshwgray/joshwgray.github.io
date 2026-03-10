@@ -8,13 +8,13 @@ positions:
     duration: 6 months
     location: Dublin
     type: management
-    description: Lead multiple engineering teams, ensuring alignment on technical strategy
+    description: Led multiple engineering teams to improve delivery predictability, product quality, and strategic execution.
     highlights:
-      - Lead multiple engineering teams, ensuring alignment on technical strategy
-      - Manage people development through mentoring, coaching, performance reviews
-      - Drive operational excellence through incident management, quality assurance
-      - Collaborate with Architecture and Product teams on roadmap planning
-      - Worked on initiative to implement and facilitate increased AI adoption
+      - Directed multi-team execution against a shared technical strategy to improve roadmap predictability and reduce delivery risk.
+      - Built coaching, mentoring, and performance practices that strengthened team capability and leadership continuity.
+      - Improved incident response and quality practices to lower operational risk and protect customer trust.
+      - Partnered with Architecture and Product to prioritize high-value roadmap outcomes and improve time-to-value.
+      - Led AI adoption initiatives that increased engineering throughput and reduced repetitive delivery work.
     skills:
       - Team Leadership
       - Engineering Management
@@ -39,13 +39,13 @@ positions:
     duration: 8 months
     location: Dublin
     type: leadership
-    description: Technical leadership for engineering team
+    description: Delivered technical leadership that improved product reliability and execution speed.
     highlights:
-      - Led technical direction and architecture decisions for engineering team
-      - Mentored engineers on best practices and code quality
-      - Facilitated sprint planning and technical refinement sessions
-      - Collaborated with cross-functional teams on feature delivery
-      - Drove adoption of modern development practices and tooling
+      - Guided architecture and technical decisions to reduce rework and increase long-term maintainability.
+      - Raised engineering standards through mentoring and code-quality practices that reduced delivery risk.
+      - Ran planning and refinement processes that improved sprint predictability and team focus.
+      - Coordinated with cross-functional partners to unblock delivery and accelerate customer-facing outcomes.
+      - Introduced modern tooling and practices that improved developer efficiency and release confidence.
     skills:
       - Team Leadership
       - Technical Leadership
@@ -66,12 +66,12 @@ positions:
     duration: 1 year 11 months
     location: Carlow
     type: management
-    description: Oversaw overall delivery of software engineering team
+    description: Owned engineering delivery outcomes to improve execution consistency and business alignment.
     highlights:
-      - Oversaw overall delivery of software engineering team
-      - Collaborated with product owners to prioritize initiatives
-      - Mentored and inspired team members
-      - Ensured adherence to best software engineering practices
+      - Led delivery governance and execution practices that increased confidence in delivery commitments.
+      - Partnered with product owners to prioritize initiatives with the strongest customer and business impact.
+      - Coached and developed engineers to improve capability, resilience, and succession readiness.
+      - Standardized engineering practices to reduce defect risk and improve maintainability.
     skills:
       - Team Leadership
       - Product Management
@@ -94,16 +94,16 @@ positions:
     duration: 2 years 6 months
     location: Cape Town, South Africa
     type: management
-    description: Engineering Manager for Willow Marketplace leading distributed team
+    description: Led a distributed engineering organization to improve marketplace delivery quality and execution reliability.
     highlights:
-      - Engineering Manager for Willow Marketplace leading distributed team
-      - Align with Product Management on product direction
-      - Work with Product Management, SMEs, and Product Design to refine priorities
-      - Sponsor Engineering led projects on Product backlog
-      - Continuously evaluate processes for quality software delivery
-      - Lead and mentor engineering team
-      - Complete monthly 1:1 Performance Conversations
-      - Build diverse team with inclusive culture
+      - Led distributed teams with clear delivery accountability, improving execution consistency across time zones.
+      - Aligned engineering with Product Management on outcomes that supported product growth and customer value.
+      - Partnered with Product, SMEs, and Design to prioritize work that improved delivery leverage.
+      - Sponsored engineering-led backlog investments that reduced technical drag and protected delivery velocity.
+      - Continuously improved delivery processes to raise quality and reduce avoidable operational overhead.
+      - Mentored engineers and leaders to strengthen team performance and reduce key-person dependency.
+      - Ran structured monthly performance conversations to improve clarity, engagement, and development outcomes.
+      - Built an inclusive team culture that improved collaboration and long-term team sustainability.
     skills:
       - Team Leadership
       - Management
@@ -133,18 +133,18 @@ positions:
     duration: 2 years 6 months
     location: Cape Town, South Africa
     type: [leadership, technical]
-    description: Automation Solutions Architect and Team Lead
+    description: Combined solution architecture and team leadership to deliver automation outcomes with clear operational value.
     highlights:
-      - Investigation of new RPA tools
-      - Architect RPA process implementations
-      - Lead team of 7 RPA Developers
-      - Develop custom functionality and extend existing features
-      - Schedule and conduct regular one-on-one check-ins
-      - Perform performance reviews
-      - Coach team members on career goals and skill development
-      - Work with Operations Manager to implement PowerBI dashboards
-      - Oversee solution design documentation
-      - Oversee project requirements and business process improvement design
+      - Evaluated and selected RPA tooling to improve automation fit, reduce delivery risk, and support scale.
+      - Architected automation implementations that improved process consistency and reduced manual operational load.
+      - Led a team of 7 developers to deliver automation initiatives aligned to business priorities.
+      - Built and extended platform capabilities to accelerate delivery of reusable automation solutions.
+      - Established consistent one-on-ones and performance rhythms that improved engagement and accountability.
+      - Conducted performance reviews focused on growth and stronger long-term team output.
+      - Coached team members on career progression to improve retention and capability depth.
+      - Partnered with Operations to deliver PowerBI dashboards that improved visibility into operational performance.
+      - Improved solution documentation quality to reduce handover risk and improve support readiness.
+      - Drove requirements and process-improvement design to increase efficiency and delivery clarity.
     skills:
       - RPA
       - Team Leadership
@@ -168,13 +168,13 @@ positions:
     duration: 1 year
     location: Cape Town, South Africa
     type: engineering
-    description: Backend and API development using .NET/MVC and WebApi2
+    description: Delivered backend and API solutions that modernized core business workflows.
     highlights:
-      - Backend and API development using .NET/MVC and WebApi2
-      - Agile environment with strict SCRUM focus
-      - SCRUM Product Owner certification through ScrumAlliance
-      - Delivered project for large manufacturing company to optimize IT systems
-      - Rewrite of aged Delphi-based manufacturing and warehouse systems
+      - Built backend and API capabilities that enabled more reliable and maintainable business systems.
+      - Worked in a disciplined Scrum delivery model to improve planning cadence and stakeholder transparency.
+      - Earned Scrum Product Owner certification to improve cross-functional delivery effectiveness.
+      - Delivered modernization work for a large manufacturer that improved operational system effectiveness.
+      - Replaced aging Delphi systems to reduce technology risk and improve long-term supportability.
     skills:
       - API Development
       - Backend Development
@@ -194,12 +194,12 @@ positions:
     duration: 4 years 2 months
     location: Cape Town, South Africa
     type: engineering
-    description: Feature development for clients in Agile environment
+    description: Built client-facing software that supported business growth across multiple industries.
     highlights:
-      - Feature development for clients in Agile environment
-      - ASP.NET MVC projects using Entity Framework, jQuery, SQL Server
-      - Internal and client applications ranging from financial to CMS
-      - "Key project: TrustaTag - patented 2D barcode system for healthcare products"
+      - Delivered product features in Agile teams to improve customer value delivery speed.
+      - Built and maintained ASP.NET MVC solutions that supported stable, scalable business operations.
+      - Contributed to internal and client applications that improved workflows from financial systems to CMS.
+      - Supported development of TrustaTag, a patented healthcare barcode platform improving product verification workflows.
     skills:
       - Agile
     technologies:
@@ -218,13 +218,13 @@ positions:
     duration: 6 months
     location: Cape Town, South Africa
     type: technical
-    description: System Analyst on large Document Automation project
+    description: Improved document automation delivery for a large-scale insurance transformation program.
     highlights:
-      - System Analyst on large Document Automation project
-      - Thunderhead NOW suite (Business Object Studio, Business Content Studio, Business Admin)
-      - Integrate document templates with Guidewire Policy Centre
-      - Senior business stakeholder involvement for business rules
-      - Agile environment with daily scrums, sprint planning
+      - Delivered analysis and implementation support for enterprise document automation outcomes.
+      - Used Thunderhead NOW capabilities to improve template reliability and compliance readiness.
+      - Integrated template workflows with Guidewire Policy Centre to streamline policy document operations.
+      - Worked with senior stakeholders to define business rules and reduce downstream rework.
+      - Operated in Agile delivery cycles to maintain momentum and decision clarity.
     skills:
       - Document Automation
       - Business Analysis
@@ -242,14 +242,14 @@ positions:
     duration: 1 year 3 months
     location: Johannesburg, South Africa
     type: engineering
-    description: In-house and client-facing account management applications
+    description: Delivered account and reporting software supporting critical banking operations.
     highlights:
-      - In-house and client-facing account management applications
-      - Commodities and Trade Settlements business
-      - Trade Reporting software (FSA reporting)
-      - Maintenance and support of application suite
-      - Out-of-hours support
-      - Technical point of contact for London and Hong Kong offices
+      - Built in-house and client-facing account management capabilities for business-critical workflows.
+      - Supported Commodities and Trade Settlements systems essential to operational continuity.
+      - Delivered trade-reporting software to support regulatory reporting obligations.
+      - Maintained and improved application suites to protect service reliability and user confidence.
+      - Provided out-of-hours support to reduce business disruption during high-impact incidents.
+      - Acted as technical contact for London and Hong Kong teams to improve global coordination.
     skills:
       - Support
       - Stakeholder Management
@@ -267,16 +267,16 @@ positions:
     duration: 2 years 1 month
     location: Johannesburg, South Africa
     type: [management, technical]
-    description: Technical Service Manager for Nokia Music in South Africa
+    description: Managed technical service operations to support Nokia Music adoption and service quality.
     highlights:
-      - Technical Service Manager for Nokia Music in South Africa
-      - Support South African and Pan Arab sales units
-      - Technical maintenance of Nokia Music Service lifecycle
-      - Platform/product updates, device testing, QA testing
-      - Localized product manager and technical advisory
-      - Customer Relationship Marketing, Web Analytics
-      - Managed NPS widget rollout
-      - Managed Pinless Activation rollout for Ovi Music Unlimited
+      - Managed local technical service operations for Nokia Music to support commercial rollout success.
+      - Enabled South African and Pan-Arab sales teams with technical support that improved go-to-market execution.
+      - Maintained service lifecycle quality to reduce customer-impacting issues and protect brand experience.
+      - Delivered platform updates, device testing, and QA to improve release confidence.
+      - Served as localized product and technical advisor to align market needs with product execution.
+      - Used CRM and web analytics inputs to inform customer lifecycle improvements.
+      - Led NPS widget rollout to strengthen customer feedback visibility.
+      - Led Pinless Activation rollout to improve customer onboarding experience.
     skills:
       - Product Management
       - Technical Support
@@ -298,11 +298,11 @@ positions:
     duration: 6 months
     location: South Africa
     type: engineering
-    description: Design, development, and maintenance of websites
+    description: Delivered web solutions that supported client operations and service reliability.
     highlights:
-      - Design, development, and maintenance of websites
-      - 3-tiered applications using C#, web services, SQL 2000-2005
-      - Development work at client sites
+      - Built and maintained websites that improved client digital presence and service continuity.
+      - Developed 3-tier applications with C#, web services, and SQL to support core business workflows.
+      - Delivered on-site client development work to accelerate delivery cycles and issue resolution.
     skills: []
     technologies:
       - C#
@@ -320,13 +320,13 @@ positions:
     duration: 7 months
     location: Basingstoke, UK
     type: engineering
-    description: Thunderhead Analyst/Developer in Insurance Team
+    description: Delivered insurance document solutions balancing compliance, quality, and delivery speed.
     highlights:
-      - Thunderhead Analyst/Developer in Insurance Team
-      - Creation and maintenance of legally approved templates
-      - Thunderhead System (Business Content Studio, Business Object Studio)
-      - Design, development, testing, and documentation
-      - Implementation of documents with business rules
+      - Delivered analyst/developer support for insurance document operations with strong quality controls.
+      - Created and maintained legally approved templates to reduce compliance risk.
+      - Used Thunderhead tooling to improve document production reliability and maintainability.
+      - Owned design, development, testing, and documentation to improve handover and audit readiness.
+      - Implemented business-rule-driven documents to improve policy communication consistency.
     skills:
       - Document Development
       - Template Development
