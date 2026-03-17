@@ -37,19 +37,7 @@ categories:
         yearsExperience: 8+
       - name: DotNet Core
         proficiency: advanced
-        yearsExperience: 5+
-      - name: WebApi2
-        proficiency: advanced
-        yearsExperience: 5+
-      - name: HTML
-        proficiency: advanced
-        yearsExperience: 10+
-      - name: CSS
-        proficiency: intermediate
-        yearsExperience: 10+
-      - name: jQuery
-        proficiency: intermediate
-        yearsExperience: 8+
+        yearsExperience: 4+
 
   - name: Architecture & Design
     skills:
@@ -58,7 +46,7 @@ categories:
         yearsExperience: 6+
       - name: IaC
         proficiency: intermediate
-        yearsExperience: 4+
+        yearsExperience: 2+
       - name: System Design
         proficiency: advanced
         yearsExperience: 8+
@@ -73,7 +61,7 @@ categories:
         yearsExperience: 5+
       - name: Terraform
         proficiency: intermediate
-        yearsExperience: 4+
+        yearsExperience: 2+
       - name: CI/CD
         proficiency: advanced
         yearsExperience: 6+
@@ -103,10 +91,10 @@ categories:
     skills:
       - name: SQL
         proficiency: advanced
-        yearsExperience: 15+
+        yearsExperience: 10+
       - name: SQL Server
         proficiency: advanced
-        yearsExperience: 12+
+        yearsExperience: 10+
 
   - name: Tools
     skills:
@@ -115,7 +103,7 @@ categories:
         yearsExperience: 15+
       - name: PowerBI
         proficiency: intermediate
-        yearsExperience: 4+
+        yearsExperience: 2+
       - name: Thunderhead
         proficiency: intermediate
         yearsExperience: 2
@@ -139,4 +127,4 @@ categories:
         yearsExperience: 4+
       - name: AI Adoption
         proficiency: intermediate
-        yearsExperience: 1+
+        yearsExperience: 2+
