@@ -1,7 +1,8 @@
 {{- define "main" -}}
-{{- $metadata := site.Data.cv.metadata -}}
-{{- $positions := sort site.Data.cv.experience.positions "startDate" "desc" -}}
-{{- $skillCategories := site.Data.cv.skills.categories -}}
+{{- $metadata := hugo.Data.cv.metadata -}}
+{{- $positions := sort hugo.Data.cv.experience.positions "startDate" "desc" -}}
+{{- $skillCategories := hugo.Data.cv.skills.categories -}}
+{{- $qualifications := hugo.Data.cv.qualifications -}}
 
 <article class="cv-page">
   <header class="cv-header">
@@ -56,10 +57,10 @@
       <!-- Role Type Filters -->
       <div class="cv-filter-group" role="group" aria-label="Filter by role type">
         <span class="cv-filter-label">Role Type:</span>
-        <button 
-          type="button" 
-          class="cv-filter-btn" 
-          data-filter-type="type" 
+        <button
+          type="button"
+          class="cv-filter-btn"
+          data-filter-type="type"
           data-filter-value="management"
           aria-pressed="false"
         >
@@ -74,10 +75,19 @@
         >
           Engineering
         </button>
-        <button 
-          type="button" 
-          class="cv-filter-btn" 
-          data-filter-type="type" 
+        <button
+          type="button"
+          class="cv-filter-btn"
+          data-filter-type="type"
+          data-filter-value="leadership"
+          aria-pressed="false"
+        >
+          Leadership
+        </button>
+        <button
+          type="button"
+          class="cv-filter-btn"
+          data-filter-type="type"
           data-filter-value="technical"
           aria-pressed="false"
         >
@@ -128,35 +138,19 @@
       >
         Clear Filters
       </button>
-      <button 
-        type="button" 
-        class="cv-action-btn cv-download-btn" 
+      <a
+        class="cv-action-btn cv-download-btn"
         id="cv-download-pdf"
-        aria-label="Download CV as PDF"
+        href="{{ "cv/josh-gray-engineering-cv.pdf" | relURL }}"
+        aria-label="Open downloadable CV PDF"
       >
-        📄 Download PDF
-      </button>
+        Open PDF
+      </a>
     </div>
 
     <p id="cv-results-announcer" class="cv-visually-hidden" aria-live="polite" aria-atomic="true"></p>
     <p id="cv-filter-announcer" class="cv-visually-hidden" aria-live="polite" aria-atomic="true"></p>
   </div>
-
-  {{- with $skillCategories }}
-  <section class="cv-skills" aria-label="Skills overview">
-    <h2>Skills</h2>
-    {{- range . }}
-    <article class="cv-skill-category">
-      <h3>{{ .name }}</h3>
-      <div role="list" aria-label="{{ .name }} skills">
-        {{- range .skills }}
-        <div role="listitem" data-skill-level="{{ .proficiency }}">{{ .name }}</div>
-        {{- end }}
-      </div>
-    </article>
-    {{- end }}
-  </section>
-  {{- end }}
 
   <section class="cv-timeline" aria-label="Career timeline">
     <h2>Experience</h2>
@@ -175,14 +169,13 @@
       <header>
         <h3>{{ .role }} <span class="cv-company">at {{ .company }}</span></h3>
         <p class="cv-meta">
-          <time datetime="{{ .startDate }}">{{ .startDate }}</time>
+          <time datetime="{{ .startDate }}">{{ time.Format "Jan 2006" (printf "%s-01" .startDate) }}</time>
           to
           {{ if eq (lower (printf "%v" .endDate)) "present" }}
             <time>Present</time>
           {{ else }}
-            <time datetime="{{ .endDate }}">{{ .endDate }}</time>
+            <time datetime="{{ .endDate }}">{{ time.Format "Jan 2006" (printf "%s-01" .endDate) }}</time>
           {{ end }}
-          {{- with .duration }} <span>({{ . }})</span>{{- end -}}
           {{- with .location }} <span>{{ . }}</span>{{- end -}}
         </p>
         {{- with .description }}
@@ -208,6 +201,77 @@
       </section>
     </article>
     {{- end }}
+  </section>
+
+  {{- with $skillCategories }}
+  <section class="cv-skills" aria-label="Skills overview">
+    <h2>Skills</h2>
+    {{- range . }}
+    <article class="cv-skill-category">
+      <h3>{{ .name }}</h3>
+      <div role="list" aria-label="{{ .name }} skills">
+        {{- range .skills }}
+        <div role="listitem" data-skill-level="{{ .proficiency }}">{{ .name }}</div>
+        {{- end }}
+      </div>
+    </article>
+    {{- end }}
+  </section>
+  {{- end }}
+
+  <section class="cv-development" aria-label="Education and professional development">
+    <h2>Education &amp; Professional Development</h2>
+    <div class="cv-development-grid">
+      {{- with $qualifications.education }}
+      <article class="cv-development-card">
+        <h3>Education</h3>
+        {{- range . }}
+        <div class="cv-development-item">
+          <h4>{{ .qualification }}</h4>
+          <p>{{ .institution }} <span aria-hidden="true">·</span> {{ .startYear }}–{{ .endYear }}</p>
+        </div>
+        {{- end }}
+      </article>
+      {{- end }}
+
+      {{- with $qualifications.certifications }}
+      <article class="cv-development-card">
+        <h3>Certification</h3>
+        {{- range . }}
+        <div class="cv-development-item">
+          <h4>{{ .name }}</h4>
+          <p>
+            {{ .issuer }} <span aria-hidden="true">·</span> {{ .issued }}
+            {{- with .status }} <span aria-hidden="true">·</span> {{ . }}{{- end }}
+          </p>
+          {{- with .topics }}
+          <div class="cv-development-topics" role="list" aria-label="Topics covered">
+            {{- range . }}
+            <span role="listitem">{{ . }}</span>
+            {{- end }}
+          </div>
+          {{- end }}
+        </div>
+        {{- end }}
+      </article>
+      {{- end }}
+
+      {{- with $qualifications.training }}
+      <article class="cv-development-card">
+        <h3>Training</h3>
+        {{- range . }}
+        <div class="cv-development-item">
+          <h4>{{ .name }}</h4>
+          <ul>
+            {{- range .courses }}
+            <li>{{ . }}</li>
+            {{- end }}
+          </ul>
+        </div>
+        {{- end }}
+      </article>
+      {{- end }}
+    </div>
   </section>
 </article>
 

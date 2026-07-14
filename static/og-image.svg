@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Josh Gray — engineering leadership and AI-enabled delivery">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17181a"/>
+      <stop offset="1" stop-color="#30343a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <rect x="76" y="76" width="14" height="478" rx="7" fill="#8b949e"/>
+  <text x="140" y="230" fill="#f5f5f5" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="700">Josh Gray</text>
+  <text x="145" y="320" fill="#d6d9dd" font-family="Arial, Helvetica, sans-serif" font-size="42">Engineering leadership</text>
+  <text x="145" y="380" fill="#d6d9dd" font-family="Arial, Helvetica, sans-serif" font-size="42">AI-enabled delivery</text>
+  <text x="145" y="490" fill="#9da4ad" font-family="Arial, Helvetica, sans-serif" font-size="28">joshwgray.github.io</text>
+</svg>

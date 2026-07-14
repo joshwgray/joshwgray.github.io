@@ -15,7 +15,7 @@ This blog explores software engineering concepts through practical examples and 
 
 ## 🛠 Technology Stack
 
-- **Static Site Generator**: [Hugo](https://gohugo.io/) (v0.141.0+)
+- **Static Site Generator**: [Hugo](https://gohugo.io/) (v0.162.1+)
 - **Theme**: [PaperMod](https://github.com/adityatelange/hugo-PaperMod)
 - **Hosting**: GitHub Pages
 - **CI/CD**: GitHub Actions
@@ -62,7 +62,7 @@ hugo server -D
 
 ### Prerequisites
 
-- [Hugo Extended](https://gohugo.io/installation/) (v0.141.0 or higher)
+- [Hugo Extended](https://gohugo.io/installation/) (v0.162.1 or higher)
 - [Git](https://git-scm.com/)
 
 ### Setup
@@ -85,6 +85,16 @@ hugo server -D
 
 4. **Visit your local site**: http://localhost:1313
 
+### Regenerating the CV PDF
+
+The downloadable CV is generated from the same YAML data as the interactive page:
+
+```bash
+python3 scripts/generate-cv-pdf.py
+```
+
+The generator requires ReportLab. It uses PyYAML when installed and otherwise falls back to Ruby's standard YAML parser. Commit the regenerated `static/cv/josh-gray-engineering-cv.pdf` whenever CV content changes.
+
 ### Project Structure
 
 ```
@@ -92,6 +102,7 @@ hugo server -D
 ├── archetypes/          # Content templates
 ├── content/             # Blog posts and pages
 │   ├── about.md         # About page
+│   ├── cv.md            # Interactive CV page
 │   └── posts/           # Blog posts
 ├── static/              # Static assets
 ├── themes/PaperMod/     # Theme submodule

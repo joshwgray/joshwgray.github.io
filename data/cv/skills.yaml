@@ -1,5 +1,25 @@
 ---
 categories:
+  - name: AI-Enabled Engineering
+    skills:
+      - name: AI Adoption
+        proficiency: advanced
+        yearsExperience: 2+
+      - name: GitHub Copilot
+        proficiency: advanced
+        yearsExperience: 2+
+      - name: Claude Code
+      - name: OpenAI Codex
+      - name: AI-Ready Repositories
+        proficiency: advanced
+        yearsExperience: 2+
+      - name: Developer Productivity
+        proficiency: advanced
+        yearsExperience: 8+
+      - name: Responsible AI Adoption
+        proficiency: advanced
+        yearsExperience: 2+
+
   - name: Leadership & Management
     skills:
       - name: Team Leadership
@@ -8,9 +28,6 @@ categories:
       - name: Engineering Management
         proficiency: expert
         yearsExperience: 8+
-      - name: Management
-        proficiency: expert
-        yearsExperience: 10+
       - name: Mentoring
         proficiency: expert
         yearsExperience: 10+
@@ -20,8 +37,23 @@ categories:
       - name: Stakeholder Management
         proficiency: advanced
         yearsExperience: 10+
+      - name: Technical Strategy
+        proficiency: advanced
+        yearsExperience: 8+
 
-  - name: Development
+  - name: Architecture & Design
+    skills:
+      - name: Solution Architecture
+        proficiency: advanced
+        yearsExperience: 6+
+      - name: System Design
+        proficiency: advanced
+        yearsExperience: 8+
+      - name: SaaS
+        proficiency: advanced
+        yearsExperience: 6+
+
+  - name: Software Development
     skills:
       - name: C#
         proficiency: advanced
@@ -35,21 +67,6 @@ categories:
       - name: Entity Framework
         proficiency: advanced
         yearsExperience: 8+
-      - name: DotNet Core
-        proficiency: advanced
-        yearsExperience: 4+
-
-  - name: Architecture & Design
-    skills:
-      - name: Solution Architecture
-        proficiency: advanced
-        yearsExperience: 6+
-      - name: IaC
-        proficiency: intermediate
-        yearsExperience: 2+
-      - name: System Design
-        proficiency: advanced
-        yearsExperience: 8+
 
   - name: Cloud & DevOps
     skills:
@@ -59,15 +76,15 @@ categories:
       - name: Azure DevOps
         proficiency: advanced
         yearsExperience: 5+
-      - name: Terraform
-        proficiency: intermediate
-        yearsExperience: 2+
       - name: CI/CD
         proficiency: advanced
         yearsExperience: 6+
-      - name: DevOps
-        proficiency: advanced
-        yearsExperience: 8+
+      - name: Infrastructure as Code
+        proficiency: intermediate
+        yearsExperience: 2+
+      - name: Terraform
+        proficiency: intermediate
+        yearsExperience: 2+
       - name: Git
         proficiency: expert
         yearsExperience: 10+
@@ -75,15 +92,15 @@ categories:
         proficiency: expert
         yearsExperience: 8+
 
-  - name: Methodologies
+  - name: Delivery & Product
     skills:
-      - name: Agile
+      - name: Agile Delivery
         proficiency: expert
         yearsExperience: 12+
-      - name: SCRUM
+      - name: Scrum
         proficiency: advanced
         yearsExperience: 10+
-      - name: SaaS
+      - name: Product Management
         proficiency: advanced
         yearsExperience: 6+
 
@@ -95,36 +112,15 @@ categories:
       - name: SQL Server
         proficiency: advanced
         yearsExperience: 10+
-
-  - name: Tools
-    skills:
-      - name: Visual Studio
-        proficiency: expert
-        yearsExperience: 15+
-      - name: PowerBI
+      - name: Power BI
         proficiency: intermediate
         yearsExperience: 2+
-      - name: Thunderhead
-        proficiency: intermediate
-        yearsExperience: 2
 
-  - name: Specialized
+  - name: Earlier Specialisms
     skills:
-      - name: RPA
+      - name: Robotic Process Automation
         proficiency: advanced
         yearsExperience: 3+
       - name: Document Automation
         proficiency: advanced
-        yearsExperience: 2+
-      - name: Product Management
-        proficiency: advanced
-        yearsExperience: 6+
-      - name: QA Testing
-        proficiency: intermediate
-        yearsExperience: 5+
-      - name: Web Analytics
-        proficiency: intermediate
-        yearsExperience: 4+
-      - name: AI Adoption
-        proficiency: intermediate
         yearsExperience: 2+

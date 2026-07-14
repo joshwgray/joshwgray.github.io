@@ -1,0 +1,137 @@
+{{- if .Params.profilePage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "name": {{ .Title | plainify }},
+  "url": {{ .Permalink }},
+  "description": {{ .Description | plainify }},
+  "dateModified": {{ .Lastmod }},
+  "mainEntity": {
+    "@type": "Person",
+    "@id": {{ printf "%s#person" .Permalink }},
+    "name": {{ site.Params.author }},
+    "url": {{ site.Home.Permalink }},
+    "jobTitle": {{ .Params.jobTitle }},
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dublin",
+      "addressCountry": "IE"
+    },
+    "sameAs": [
+      {{- range $index, $url := .Params.sameAs }}{{ if $index }}, {{ end }}{{ $url }}{{ end }}
+    ],
+    "knowsAbout": [
+      "Engineering Management",
+      "AI-Enabled Software Delivery",
+      "Software Architecture",
+      "Developer Productivity",
+      "Microsoft Azure",
+      ".NET"
+    ]
+  }
+}
+</script>
+{{- else if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{- ( site.Params.schema.publisherType | default "Organization") | title -}}",
+  "name": {{ site.Title }},
+  "url": {{ site.Home.Permalink }},
+  "description": {{ site.Params.description | plainify | truncate 180 | safeHTML }},
+  {{- if (eq site.Params.schema.publisherType "Person") }}
+  "image": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }},
+  {{- else }}
+  "logo": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }},
+  {{- end }}
+  "sameAs": [
+    {{- if site.Params.schema.sameAs }}
+      {{ range $i, $e := site.Params.schema.sameAs }}{{ if $i }}, {{ end }}{{ trim $e " " }}{{ end }}
+    {{- else}}
+      {{ range $i, $e := site.Params.SocialIcons }}{{ if $i }}, {{ end }}{{ trim $e.url " " | safeURL }}{{ end }}
+    {{- end}}
+  ]
+}
+</script>
+{{- else if (or .IsPage .IsSection) }}
+{{- $url := replace .Parent.Permalink (printf "%s" site.Home.Permalink) "" }}
+{{- $langURL := strings.TrimPrefix (printf "%s/" .Lang) $url }}
+{{- $breadcrumbPages := split $langURL "/" }}
+{{- $scratch := newScratch }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+  {{- range $index, $element := $breadcrumbPages }}
+    {{- $scratch.Add "path" (printf "%s/" $element) | safeJS }}
+    {{- $breadcrumbPage := site.GetPage ($scratch.Get "path") }}
+    {{- if (and $breadcrumbPage (gt (len .) 0)) }}
+    {{- if $index }}, {{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ add 1 $index }},
+      "name": {{ $breadcrumbPage.Name }},
+      "item": {{ $breadcrumbPage.Permalink | safeHTML }}
+    }
+    {{- end }}
+  {{- end }}
+  {{- if ge (len $breadcrumbPages) 2 }}, {{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ len $breadcrumbPages }},
+      "name": {{ .Name }},
+      "item": {{ .Permalink | safeHTML }}
+    }
+  ]
+}
+</script>
+{{- if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | plainify }},
+  "name": {{ .Title | plainify }},
+  "description": {{ with .Description | plainify }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }},
+  "keywords": [
+    {{- if .Params.keywords }}
+    {{ range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
+    {{- else }}
+    {{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
+    {{- end }}
+  ],
+  "articleBody": {{ .Content | safeJS | htmlUnescape | plainify }},
+  "wordCount": {{ .WordCount }},
+  "inLanguage": {{ .Language.Lang | default "en-US" }},
+  {{- if .Params.cover.image }}
+  "image": {{ if ne .Params.cover.relative true }}{{ .Params.cover.image | absURL }}{{ else }}{{ path.Join .RelPermalink .Params.cover.image | absURL }}{{ end }},
+  {{- else }}
+    {{- $images := partial "templates/_funcs/get-page-images" . }}
+    {{- with index $images 0 }}
+  "image": {{ .Permalink }},
+    {{- end }}
+  {{- end }}
+  "datePublished": {{ .PublishDate }},
+  "dateModified": {{ .Lastmod }},
+  "author": {
+    "@type": "Person",
+    "name": {{ .Params.author | default site.Params.author }}
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | safeHTML }}
+  },
+  "publisher": {
+    "@type": "{{- (site.Params.schema.publisherType | default "Organization") | title -}}",
+    "name": {{ site.Title }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }}
+    }
+  }
+}
+</script>
+{{- end }}
+{{- end }}

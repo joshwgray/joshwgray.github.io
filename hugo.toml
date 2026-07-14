@@ -1,5 +1,5 @@
 baseURL = "https://joshwgray.github.io/"
-languageCode = "en-us"
+locale = "en-US"
 title = "Josh Gray's Blog"
 theme = "PaperMod"
 
@@ -32,7 +32,14 @@ pygmentsCodeFences = true
   tocopen = false
 
   # SEO and Social
-  images = ["og-image.png"] # Add your Open Graph image
+  images = ["og-image.png"]
+
+  [params.assets]
+    favicon = "favicon.svg"
+    favicon16x16 = "favicon-16x16.png"
+    favicon32x32 = "favicon-32x32.png"
+    apple_touch_icon = "apple-touch-icon.png"
+    safari_pinned_tab = "favicon.svg"
   
   # Social media
   [[params.socialIcons]]
@@ -81,6 +88,11 @@ pygmentsCodeFences = true
     name = "About"
     url = "/about/"
     weight = 40
+  [[menu.main]]
+    identifier = "cv"
+    name = "CV"
+    url = "/cv/"
+    weight = 50
 
 # Taxonomies
 [taxonomies]
@@ -105,7 +117,7 @@ pygmentsCodeFences = true
   [privacy.vimeo]
     disabled = false
     simple = true
-  [privacy.twitter]
+  [privacy.x]
     disabled = false
     enableDNT = true
     simple = true

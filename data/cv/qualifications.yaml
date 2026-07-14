@@ -1,0 +1,34 @@
+---
+education:
+  - institution: CTI
+    qualification: National Diploma in Information Systems
+    startYear: "2007"
+    endYear: "2008"
+
+certifications:
+  - name: DevOps Mastery Specialization
+    issuer: KodeKloud
+    issued: Mar 2025
+    topics:
+      - Python
+      - Terraform
+      - Ansible
+      - Kubernetes
+      - Docker
+      - Jenkins
+      - Git
+      - DevOps Foundations
+  - name: Certified SAFe® 6 Scrum Master
+    issuer: SAFe by Scaled Agile, Inc.
+    issued: Oct 2023
+    status: Expired Oct 2024
+    topics:
+      - Scaled Agile Framework
+      - Scrum
+
+training:
+  - name: UiPath RPA Training
+    courses:
+      - UiPath Level 1 – Foundation Training
+      - UiPath Level 2 – Orchestrator
+      - UiPath Level 3 – Advanced

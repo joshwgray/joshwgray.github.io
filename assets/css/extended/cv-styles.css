@@ -293,6 +293,9 @@ main:has(.cv-page),
 }
 
 .cv-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.75rem 1.5rem;
   font-size: 0.95rem;
   font-weight: 600;
@@ -301,6 +304,7 @@ main:has(.cv-page),
   transition: all 0.2s ease;
   font-family: inherit;
   border: 2px solid transparent;
+  text-decoration: none;
 }
 
 .cv-clear-btn {
@@ -398,6 +402,78 @@ main:has(.cv-page),
 .cv-skill-category div[role="listitem"][data-skill-level="expert"] {
   background: var(--tertiary);
   font-weight: 500;
+}
+
+/* -----------------------------------------------------------------------------
+   CV Education & Professional Development
+   ----------------------------------------------------------------------------- */
+
+.cv-development {
+  margin-bottom: calc(var(--gap) * 2);
+}
+
+.cv-development h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.cv-development-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.cv-development-card {
+  padding: 1rem;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.cv-development-card h3 {
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+
+.cv-development-item h4 {
+  margin-bottom: 0.25rem;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.cv-development-item + .cv-development-item {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.cv-development-item p,
+.cv-development-item ul {
+  margin: 0;
+  color: var(--content);
+  font-size: 0.9rem;
+}
+
+.cv-development-item ul {
+  padding-left: 1.25rem;
+}
+
+.cv-development-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+}
+
+.cv-development-topics span {
+  padding: 0.25rem 0.55rem;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) / 2);
+  color: var(--content);
+  font-size: 0.8rem;
 }
 
 /* -----------------------------------------------------------------------------
@@ -689,14 +765,31 @@ details summary::marker {
     min-width: 100px;
   }
 
+  .cv-search-input {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+  }
+
   .cv-filters {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
   .cv-filter-group {
-    flex: 1 1 auto;
-    min-width: max-content;
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .cv-filter-label {
+    flex: 1 0 100%;
+    min-width: 0;
+    margin-right: 0;
+  }
+
+  .cv-filter-btn {
+    flex: 1 1 120px;
+    text-align: center;
   }
 
   /* Adjust timeline line for tablet */
@@ -722,6 +815,7 @@ details summary::marker {
   }
 
   .cv-skills h2,
+  .cv-development h2,
   .cv-timeline h2 {
     font-size: 2.25rem;
   }
@@ -822,6 +916,7 @@ details summary::marker {
   }
 
   .cv-skills h2,
+  .cv-development h2,
   .cv-timeline h2 {
     font-size: 2.5rem;
   }
@@ -880,7 +975,8 @@ details summary::marker {
   footer.footer,
   nav.nav,
   .cv-controls,
-  .cv-skip-link {
+  .cv-skip-link,
+  .top-link {
     display: none !important;
   }
 
@@ -1106,6 +1202,70 @@ details summary::marker {
     content: ", ";
     margin-right: 2pt;
     color: #222 !important;
+  }
+
+  /* =========================================================================
+     EDUCATION & PROFESSIONAL DEVELOPMENT
+     ========================================================================= */
+
+  .cv-development {
+    margin-bottom: 0.3cm;
+  }
+
+  .cv-development-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.35cm;
+  }
+
+  .cv-development-card {
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    break-inside: avoid;
+  }
+
+  .cv-development-card h3,
+  .cv-development-item h4,
+  .cv-development-item p,
+  .cv-development-item ul {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000 !important;
+  }
+
+  .cv-development-item + .cv-development-item {
+    margin-top: 4pt;
+    padding-top: 4pt;
+    border-top: 0.5pt solid #ccc;
+  }
+
+  .cv-development-card h3 {
+    margin: 0 0 3pt;
+    font-size: 9.5pt;
+  }
+
+  .cv-development-item h4,
+  .cv-development-item p,
+  .cv-development-item ul {
+    margin: 0;
+    font-size: 8.5pt;
+  }
+
+  .cv-development-topics {
+    display: block;
+    margin-top: 2pt;
+  }
+
+  .cv-development-topics span {
+    padding: 0;
+    border: none;
+    background: transparent !important;
+    color: #000 !important;
+    font-size: 8pt;
+  }
+
+  .cv-development-topics span:not(:last-child)::after {
+    content: ", ";
   }
 
   /* =========================================================================

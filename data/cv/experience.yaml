@@ -5,16 +5,17 @@ positions:
     role: Software Engineering Manager
     startDate: "2025-10"
     endDate: present
-    duration: 6 months
     location: Dublin
     type: management
     description: Led multiple engineering teams to improve delivery predictability, product quality, and strategic execution.
     highlights:
+      - Collaborated across the organization to define its AI software development lifecycle (SDLC) strategy.
       - Directed multi-team execution against a shared technical strategy to improve roadmap predictability and reduce delivery risk.
       - Built coaching, mentoring, and performance practices that strengthened team capability and leadership continuity.
       - Improved incident response and quality practices to lower operational risk and protect customer trust.
       - Partnered with Architecture and Product to prioritize high-value roadmap outcomes and improve time-to-value.
       - Led AI adoption initiatives that increased engineering throughput and reduced repetitive delivery work.
+      - Built AI-powered Slack and Jira integrations and workflows to reduce repetitive coordination work.
     skills:
       - Team Leadership
       - Engineering Management
@@ -25,6 +26,8 @@ positions:
       - GitHub
       - GitHub Copilot
       - GitHub Copilot CLI
+      - Claude Code
+      - OpenAI Codex
       - CI/CD
       - Azure
       - Azure DevOps
@@ -36,7 +39,6 @@ positions:
     role: Software Engineering Team Lead
     startDate: "2025-03"
     endDate: "2025-10"
-    duration: 8 months
     location: Dublin
     type: leadership
     description: Delivered technical leadership that improved product reliability and execution speed.
@@ -63,7 +65,6 @@ positions:
     role: Software Engineering Manager / IT Delivery Manager
     startDate: "2023-05"
     endDate: "2025-03"
-    duration: 1 year 11 months
     location: Carlow
     type: management
     description: Owned engineering delivery outcomes to improve execution consistency and business alignment.
@@ -91,7 +92,6 @@ positions:
     role: Engineering Manager
     startDate: "2020-12"
     endDate: "2023-05"
-    duration: 2 years 6 months
     location: Cape Town, South Africa
     type: management
     description: Led a distributed engineering organization to improve marketplace delivery quality and execution reliability.
@@ -115,7 +115,7 @@ positions:
       - CI/CD
       - SaaS
       - IaC
-      - DotNet Core
+      - .NET
       - Azure DevOps
       - Terraform
       - Microsoft Azure
@@ -130,7 +130,6 @@ positions:
     role: Technical Team Lead
     startDate: "2018-07"
     endDate: "2020-12"
-    duration: 2 years 6 months
     location: Cape Town, South Africa
     type: [leadership, technical]
     description: Combined solution architecture and team leadership to deliver automation outcomes with clear operational value.
@@ -165,7 +164,6 @@ positions:
     role: Software Developer
     startDate: "2017-06"
     endDate: "2018-06"
-    duration: 1 year
     location: Cape Town, South Africa
     type: engineering
     description: Delivered backend and API solutions that modernized core business workflows.
@@ -191,7 +189,6 @@ positions:
     role: Software Developer
     startDate: "2013-05"
     endDate: "2017-06"
-    duration: 4 years 2 months
     location: Cape Town, South Africa
     type: engineering
     description: Built client-facing software that supported business growth across multiple industries.
@@ -215,7 +212,6 @@ positions:
     role: System Analyst
     startDate: "2012-12"
     endDate: "2013-05"
-    duration: 6 months
     location: Cape Town, South Africa
     type: technical
     description: Improved document automation delivery for a large-scale insurance transformation program.
@@ -239,7 +235,6 @@ positions:
     role: Software Developer
     startDate: "2011-09"
     endDate: "2012-11"
-    duration: 1 year 3 months
     location: Johannesburg, South Africa
     type: engineering
     description: Delivered account and reporting software supporting critical banking operations.
@@ -264,7 +259,6 @@ positions:
     role: Technical Service Manager
     startDate: "2009-08"
     endDate: "2011-08"
-    duration: 2 years 1 month
     location: Johannesburg, South Africa
     type: [management, technical]
     description: Managed technical service operations to support Nokia Music adoption and service quality.
@@ -295,7 +289,6 @@ positions:
     role: Junior Developer
     startDate: "2009-03"
     endDate: "2009-07"
-    duration: 6 months
     location: South Africa
     type: engineering
     description: Delivered web solutions that supported client operations and service reliability.
@@ -317,7 +310,6 @@ positions:
     role: Thunderhead Developer
     startDate: "2008-05"
     endDate: "2008-11"
-    duration: 7 months
     location: Basingstoke, UK
     type: engineering
     description: Delivered insurance document solutions balancing compliance, quality, and delivery speed.

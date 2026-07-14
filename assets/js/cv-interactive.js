@@ -27,8 +27,6 @@
       this.bindSearch();
       this.bindExpandCollapse();
       this.bindKeyboardShortcuts();
-      this.bindPDFDownload();
-      this.initScrollAnimations();
 
       this.applyStateFromHash();
       this.applyFiltersAndSearch();
@@ -184,58 +182,6 @@
             self.searchInput.select();
           }
         }
-      });
-    },
-
-    bindPDFDownload: function () {
-      this.controls.addEventListener("click", function (event) {
-        var downloadBtn = event.target.closest("#cv-download-pdf");
-        if (!downloadBtn) {
-          return;
-        }
-
-        var origTitle = document.title;
-        document.title = "Josh Gray - Engineering CV";
-        window.addEventListener("afterprint", function restoreTitle() {
-          document.title = origTitle;
-          window.removeEventListener("afterprint", restoreTitle);
-        });
-        window.print();
-      });
-    },
-
-    initScrollAnimations: function () {
-      if (!("IntersectionObserver" in window)) {
-        return;
-      }
-
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        return;
-      }
-
-      var observer = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            if (!entry.isIntersecting) {
-              return;
-            }
-
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-            observer.unobserve(entry.target);
-          });
-        },
-        {
-          threshold: 0.15,
-          rootMargin: "0px 0px -10% 0px",
-        }
-      );
-
-      this.timelineItems.forEach(function (item) {
-        item.style.opacity = "0";
-        item.style.transform = "translateY(14px)";
-        item.style.transition = "opacity 350ms ease, transform 350ms ease";
-        observer.observe(item);
       });
     },
 
